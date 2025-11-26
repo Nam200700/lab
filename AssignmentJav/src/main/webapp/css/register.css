@@ -1,0 +1,140 @@
+body.auth {
+  background: #f2f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  animation: fadeInBody 1s ease-in;
+}
+
+/* Hiệu ứng fade-in cho toàn trang */
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.auth-container {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  animation: scaleUp 0.8s ease;
+}
+
+/* Container scale-up */
+@keyframes scaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Cột ảnh bên trái */
+.auth-image {
+  flex: 1;
+  background: #eee;
+  overflow: hidden;
+}
+
+.auth-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomIn 10s ease-in-out infinite alternate;
+}
+
+/* Ảnh zoom in/out nhẹ */
+@keyframes zoomIn {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/* Form bên phải */
+.auth-form {
+  flex: 1;
+  padding: 40px;
+  animation: slideUp 0.8s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  animation: fadeInText 1.2s ease;
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Input với hiệu ứng focus */
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.auth-form input:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 8px rgba(0,119,204,0.4);
+  transform: scale(1.02);
+  outline: none;
+}
+
+/* Button với hiệu ứng hover */
+.auth-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #0077cc, #005bbb);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Error message với animation */
+.auth-form .error {
+  color: #d8000c;
+  background: #ffd2d2;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  text-align: center;
+  animation: shake 0.4s ease;
+}
+
+/* Shake animation cho error */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}

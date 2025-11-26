@@ -1,0 +1,101 @@
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Widget chung */
+.widget {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.widget:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.widget h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #004e92;
+    border-left: 4px solid #004e92;
+    padding-left: 8px;
+}
+
+/* Danh sách tin */
+.widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget ul li {
+    margin-bottom: 10px;
+}
+
+.widget ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.widget ul li a:hover {
+    color: #ff6600;
+}
+
+/* Newsletter form */
+.widget.newsletter p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.widget.newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.widget.newsletter input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.widget.newsletter input[type="email"]:focus {
+    border-color: #004e92;
+    outline: none;
+}
+
+.widget.newsletter button {
+    padding: 10px;
+    background: linear-gradient(90deg, #004e92, #000428);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.widget.newsletter button:hover {
+    background: linear-gradient(90deg, #000428, #004e92);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        flex: none;
+        width: 100%;
+    }
+}

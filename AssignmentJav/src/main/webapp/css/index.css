@@ -1,0 +1,154 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #004e92, #000428);
+    padding: 15px 30px;
+    color: #fff;
+}
+
+.header-image {
+    height: 50px;
+}
+
+.header-login a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.header-login a:hover {
+    background-color: #fff;
+    color: #004e92;
+}
+
+/* Menu (jsp include) */
+nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #004e92;
+}
+
+/* Main content */
+.content-container {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+/* Tin nổi bật */
+.main-content {
+    flex: 3;
+}
+
+.main-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #004e92;
+    border-left: 5px solid #004e92;
+    padding-left: 10px;
+}
+
+.news-item {
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.news-image {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-right: 1px solid #eee;
+}
+
+.news-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-info h3 a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.news-info h3 a:hover {
+    color: #004e92;
+}
+
+.excerpt {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.meta {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Sidebar */
+aside {
+    flex: 1;
+}
+
+/* Footer */
+.footer {
+    background-color: #000428;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
